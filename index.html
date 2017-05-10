@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Timepicker with Jquery</title>
+  <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="js/jquery.timepicker.js"></script>
+  <link rel="stylesheet" type="text/css" href="js/jquery.timepicker.css" />
+</head>
+<body>
+  <div align="center">
+    <br />
+    <br />
+    <b>Hora: </b><input id="setTimeExample" type="text" class="time" />
+    <button id="setTimeButton">Hora actual</button>
+  </div>
+</body>
+<script>
+  $(function() {
+  $('#setTimeExample').timepicker();
+    $('#setTimeButton').on('click', function (){
+      $('#setTimeExample').timepicker('setTime', new Date());
+    });
+  });
+</script>
+</html>
